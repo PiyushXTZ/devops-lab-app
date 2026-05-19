@@ -22,7 +22,8 @@ pipeline {
 
     stage('📦 Install Dependencies') {
       steps {
-        sh 'npm ci'
+        // Changed from 'npm ci' to 'npm install' to bypass missing lockfile
+        sh 'npm install'
       }
     }
 
